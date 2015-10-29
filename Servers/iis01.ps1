@@ -5,9 +5,9 @@ $ScriptPath = split-path -parent $MyInvocation.MyCommand.Definition
 . "$ScriptPath\..\Include\Include.ps1"
 
 
-# WinSrv role
-& "$ScriptPath\..\Roles\WinSrv.ps1" -RoleName "WinSrv" -OutputPath $TempFolder -cred $cred
-Publish-Config -RoleName "WinSrv" -Guid $Guid -TempFolder $TempFolder
+# MemberServer role
+& "$ScriptPath\..\Roles\MemberServer.ps1" -RoleName "MemberServer" -OutputPath $TempFolder -MachineName "iis01" -Domain $DomainName -Credential $cred
+Publish-Config -RoleName "MemberServer" -Guid $Guid -TempFolder $TempFolder
 
 
 # Web Server role

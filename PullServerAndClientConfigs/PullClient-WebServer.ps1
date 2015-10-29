@@ -31,9 +31,9 @@ configuration PartialConfig
             RegistrationKey = $RegistrationKey
 			AllowUnsecureConnection = $True
         }       
-           PartialConfiguration WinSrv
+           PartialConfiguration MemberServer
         {
-            Description = 'Configuration for the Base OS'
+            Description = 'Configuration for the domain member servers'
             ConfigurationSource = '[ConfigurationRepositoryWeb]PullSrv'
             RefreshMode = 'Pull'
         }
@@ -41,7 +41,7 @@ configuration PartialConfig
         {
             Description = 'Configuration for the Web Server'
             ConfigurationSource = '[ConfigurationRepositoryWeb]PullSrv'
-            DependsOn = "[PartialConfiguration]WinSrv"
+            DependsOn = "[PartialConfiguration]MemberServer"
             RefreshMode = 'Pull'
         }
     }

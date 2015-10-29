@@ -30,25 +30,18 @@ configuration PartialConfig
             ServerURL = $ServerURL
             RegistrationKey = $RegistrationKey
 			AllowUnsecureConnection = $True	
-        }       
-           PartialConfiguration WinSrv
-        {
-            Description = 'Configuration for the Base OS'
-            ConfigurationSource = '[ConfigurationRepositoryWeb]PullSrv'
-            RefreshMode = 'Pull'
         }
            PartialConfiguration DomainController
         {
             Description = 'Configuration for the Domain Controller'
             ConfigurationSource = '[ConfigurationRepositoryWeb]PullSrv'
-            DependsOn = "[PartialConfiguration]WinSrv"
             RefreshMode = 'Pull'
         }
            PartialConfiguration CertificateAuthority
         {
             Description = 'Configuration for the Certificate Authority'
             ConfigurationSource = '[ConfigurationRepositoryWeb]PullSrv'
-            DependsOn = "[PartialConfiguration]WinSrv"
+            DependsOn = "[PartialConfiguration]DomainController"
             RefreshMode = 'Pull'
         }
     }
