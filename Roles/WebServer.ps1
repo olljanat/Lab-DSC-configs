@@ -78,4 +78,4 @@ Configuration WebServer {
 
     }
 }
-WebServer -RoleName "WebServer" -OutputPath $TempFolder -PfxPassword $cred -PsDscRunAsCredential $cred -ConfigurationData $ConfigData
+WebServer -RoleName "WebServer" -OutputPath $OutputPath -PfxPassword $cred -PsDscRunAsCredential $cred -ConfigurationData $ConfigData

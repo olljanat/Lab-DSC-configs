@@ -90,4 +90,4 @@ Configuration DomainController
 		
     }
 }
-DomainController -RoleName "DomainController" -OutputPath $TempFolder -DomainName $DomainName -domainCred $cred -safemodeCred $cred -ConfigurationData $ConfigData
+DomainController -RoleName "DomainController" -OutputPath $OutputPath -DomainName $DomainName -domainCred $cred -safemodeCred $cred -ConfigurationData $ConfigData

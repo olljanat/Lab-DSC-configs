@@ -52,4 +52,4 @@ Configuration MemberServer
     }
 }
 
-MemberServer -RoleName "MemberServer" -MachineName $MachineName -Domain $Domain -OutputPath $TempFolder -ConfigurationData $ConfigData -Credential $Credential
+MemberServer -RoleName "MemberServer" -MachineName $MachineName -Domain $Domain -OutputPath $OutputPath -ConfigurationData $ConfigData -Credential $Credential

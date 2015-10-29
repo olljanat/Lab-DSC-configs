@@ -45,4 +45,4 @@ Configuration CertificateAuthority {
         } 
     }
 }
-CertificateAuthority -RoleName "CertificateAuthority" -OutputPath $TempFolder -cred $cred -ConfigurationData $ConfigData
+CertificateAuthority -RoleName "CertificateAuthority" -OutputPath $OutputPath -cred $cred -ConfigurationData $ConfigData
