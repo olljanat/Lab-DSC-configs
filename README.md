@@ -13,6 +13,7 @@ I will upload all of them to here and hopefully they are useful for someone else
 * xWebAdministration
 * [cADFS](https://github.com/pcgeek86/cADFS.git)
 * xComputerManagement
+* xNetworking
 
 
 ## Found bugs during testing:
